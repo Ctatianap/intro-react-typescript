@@ -1,21 +1,22 @@
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "../redux/store/store";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeProduct } from "../redux/slices/cartSlice";
+import { Product } from "./helper/interfaces";
 
 const Carrito = () => {
-  const products = useSelector((state: RootState) => state.cart);
+  const products = useSelector((state: RootState) => state.cart)
   const dispatch = useDispatch();
 
   const handleDeleteToCard = (id: number) => {
-    console.log("productoi eliminado", id);
+    console.log("producto eliminado", id);
     dispatch(removeProduct(id))
   };
 
   return (
     <div>
       <div className="flex flex-wrap justify-center gap-6">
-        {products.map((product) => (
+        {products.map((product: Product) => (
           <div
             key={product.id}
             className="max-w-sm bg-white rounded overflow-hidden shadow-lg"
