@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAsWtE_UzMeZzayBCZSup4T8a1W1hGy7Ow",
+  apiKey: "apikey",
   authDomain: "redux-toolkit-products.firebaseapp.com",
   projectId: "redux-toolkit-products",
   storageBucket: "redux-toolkit-products.firebasestorage.app",
