@@ -3,6 +3,7 @@ import ToDoList from "./components/ToDoList";
 import Products from "./components/Products";
 import NavBarPanel from "./components/NavBarPanel";
 import Carrito from "./components/Carrito";
+import InfoCompUserForm from "./components/InfoComplementaryUser";
 import { Provider } from "react-redux";
 import store from "./redux/store/store";
 
@@ -16,6 +17,7 @@ function App() {
           <NavBarPanel />
           <Routes>
             <Route path="/" element={<Products />}></Route>
+            <Route path="/user-form" element={<InfoCompUserForm />}></Route>
             <Route path="/cart" element={<Carrito />}></Route>
             <Route path="/list" element={<ToDoList />}></Route>
           </Routes>
